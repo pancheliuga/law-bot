@@ -8,4 +8,4 @@ FROM scratch
 WORKDIR /
 COPY --from=builder /go/src/app/lawBot .
 COPY --from=alpine:latest /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-ENTRYPOINT ["./lawBot"]
+ENTRYPOINT ["./lawBot", "start"]
